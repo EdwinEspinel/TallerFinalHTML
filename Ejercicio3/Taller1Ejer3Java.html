@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio numero 3 Taller Java</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilos2.css">
+    </head>
+    <body>
+        <header class="header" id="header">
+            <h1 class="pseint" id="pseint" >Ejercicio numero tres del taller de Java</h1> 
+        </header>
+        <h3>Realizar el taller #3 de PSeInt en Java</h3>       
+
+        <div class="codigo">
+            <pre>
+package Taller3;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+    private static boolean bandera=true;
+    private static int opcion;
+    public static void main(String[] args) throws IOException{
+        do {
+            limpiarPantalla();
+            menu();
+            opcion = capturarOpcion();
+            bandera = evaluarOpcion(opcion);
+        } while (bandera == true);
+    }
+    private static void menu() {
+        System.out.println("Escoja un punto del taller");
+        System.out.println("1. Punto #1");
+        System.out.println("2. Punto #2");
+        System.out.println("3. Punto #3");
+        System.out.println("4. Punto #4");
+        System.out.println("5. Punto #5");
+        System.out.println("6. Punto #6");
+        System.out.println("7. Punto #7");
+        System.out.println("8. Punto #8");
+        System.out.println("0. Salir del taller");
+        
+    }
+    private static int capturarOpcion() {
+        Scanner input = new Scanner(System.in);
+        return input.nextInt();
+    }
+    private static void limpiarPantalla() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
+    private static boolean evaluarOpcion(int opcion) throws IOException {
+        switch (opcion) {
+            case 1:
+                int dimension;
+                System.out.println("Ingrese la dimension que desea");
+                dimension=capturarOpcion();
+                Figura figuras = new Figura();
+                figuras.setFigura(opcion);
+                figuras.setDimension(dimension);
+                figuras.Figura();
+                return true;
+            case 2:
+                int dimension2;
+                System.out.println("Ingrese la dimension que desea");
+                dimension2=capturarOpcion();
+                Figura figuras2 = new Figura();
+                figuras2.setFigura(opcion);
+                figuras2.setDimension(dimension2);
+                figuras2.Figura();
+                return true;
+            case 3:
+                int dimension3;
+                System.out.println("Ingrese la dimension que desea");
+                dimension3=capturarOpcion();
+                Figura figuras3 = new Figura();
+                figuras3.setFigura(opcion);
+                figuras3.setDimension(dimension3);
+                figuras3.Figura();
+                return true;
+            case 4:
+                Calcular tablas = new Calcular();
+                tablas.Calculos();
+                return true;
+            case 5:
+                CapturarDatos capturar=new CapturarDatos();
+                capturar.Capturar();
+                return true;
+            case 6:
+                Directorio telefonos = new Directorio();
+                telefonos.Telefonos();
+                return true;
+            case 7:
+                Parqueadero parqueadero = new Parqueadero();
+                parqueadero.ElGuardian();
+                return true;
+            case 8:
+                Escuela escuela = new Escuela();
+                escuela.ElMaestro();
+                return true;
+            case 0:
+                return false;
+            default:
+                System.out.println("Opción incorrecta");
+                System.in.read();
+        }
+        return true;
+        }
+}
+
+            </pre>            
+        </div>
+        <h3>Los links del respositorio donde se encuentran las clases asosiadas a este ejercicio se enlistaran a continuacion:</h3>
+        <div class="lista">
+                <ul>
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller3/Calcular.java"><h2>Calcular</h2></a></li>                    
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller3/CapturarDatos.java"><h2>CapturarDatos</h2></a></li>                    
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller3/Contacto.java"><h2>Contacto</h2></a></li>                    
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller3/Directorio.java"><h2>Directorio</h2></a></li>                    
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller3/Escuela.java"><h2>Escuela</h2></a></li>                    
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller3/Estudiante.java"><h2>Estudiante</h2></a></li>                    
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller3/Figura.java"><h2>Figura</h2></a></li>                    
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller3/Parqueadero.java"><h2>Parqueadero</h2></a></li>                    
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller3/Vehiculo.java"><h2>Vehiculo</h2></a></li>              
+                </ul>
+            </div>
+    </body>
+</html>

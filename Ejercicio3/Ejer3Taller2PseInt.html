@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio numero 3 Taller 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilos2.css">
+    </head>
+    <body>
+        <header class="header" id="header">
+            <h1 class="pseint" id="pseint" >Ejercicio numero tres del taller 2</h1> 
+        </header>
+        <h3>Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años, entonces, deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.</h3>
+        <div class="codigo">
+            <pre>
+Proceso Punto3
+	Definir Edad Como Entero;
+	Definir nombre Como Caracter;
+	
+	Escribir "Ingrese su nombre";
+	Leer nombre;
+	Escribir "Ingrese su edad por favor";
+	Leer Edad;
+	
+	Si Edad<18 Entonces
+		Escribir nombre," usted es menor de edad, por lo tanto no puede entrar a la fiesta, por favor devuelvase a su casa a tomar lechita antes de dormir";
+	SiNo
+		Escribir nombre," usted es mayor de edad, por lo tanto puede entrar a la fiesta";
+	FinSi	
+FinProceso
+            </pre>
+        </div>
+    </body>
+</html>

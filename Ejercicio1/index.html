@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Formulario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilos.css">
+        <script src="efectos.js"></script>
+    </head>
+    <body onload="main()">
+        <form action="" class="formulario">
+            <h1 class="titulo">CONTACTENOS</h1>
+            
+            <input type="text" id="entrada-nombre" class="formulario-entrada">
+            <label for="" class="formulario-laber">Nombre</label>
+            
+            <input type="email" id="entrada-correo"class="formulario-entrada">
+            <label for="" class="formulario-laber">Correo</label>
+            
+            <input type="text" id="entrada-asunto"class="formulario-entrada">
+            <label for="" class="formulario-laber">Asunto</label>
+            
+            <input type="text" id="entrada-mensaje" class="formulario-entrada">
+            <label for="" class="formulario-laber">Mensaje</label>
+            
+            <button  onclick="captura()" class="formulario-enviar"> Enviar  </button>       
+            <button id="reset" onclick="reset()" class="formulario-enviar"> Resetear  </button>
+        </form>
+    </body>
+</html>

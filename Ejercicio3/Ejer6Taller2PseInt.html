@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio numero 6 Taller 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilos2.css">
+    </head>
+    <body>
+        <header class="header" id="header">
+            <h1 class="pseint" id="pseint" >Ejercicio numero seis del taller 2</h1> 
+        </header>
+        <h3>El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita registrar los servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en la motocicleta al entregarla.</h3>
+        <div class="codigo">
+            <pre>
+Proceso Punto6
+	Definir opcion Como Entero;
+	Definir Propietario Como Caracter;
+	Definir Servicio Como Caracter;
+	Definir Comentarios Como Caracter;
+	Definir Arreglos Como Caracter;
+	Definir Repuestos Como Caracter;
+	Definir Recomendaciones Como Caracter;
+	
+	Escribir "***********EL MAQUINISTA**********";
+	Escribir "Que accion desea realizar?";
+	Escribir "1. Ingresar un servicio";
+	Escribir "2. entregar un servicio";
+	Leer opcion;
+	Segun opcion Hacer
+		1: 
+			Escribir "Ingrese el nombre del dueño de la moto: ";
+			Leer Propietario;
+			Escribir "Ingrese el servicio que se solicito: ";
+			Leer Servicio;
+			Escribir "Ingrese los comentarios del dueño ";
+			Leer Comentarios;
+			Escribir "La motocicleta a nombre del señor(a) ",Propietario, " se le realizará el servicio ",Servicio,". Tener en cuenta: ",Comentarios;
+		2:
+			Escribir "Ingrese el nombre del dueño";
+			Leer Propietario;
+			Escribir "Describa los arreglos que se realizaron";
+			Leer Arreglos;
+			Escribir "Describa los repuestos utilizados";
+			Leer Repuestos;
+			Escribir "Recomendaciones";
+			Leer recomendaciones;
+			Escribir "La motocicleta a nombre del señor(a) ",Propietario,"Se le realizó el servicio ",Arreglos," y se utilizaron los siguiente respuesto: ",Repuestos, ". Tener cuidado con: ",recomendaciones;
+	FinSegun
+FinProceso
+            </pre>
+        </div>
+    </body>
+</html>

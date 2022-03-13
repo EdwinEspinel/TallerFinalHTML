@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio numero 3 Taller 4</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilos2.css">
+    </head>
+    <body>
+        <header class="header" id="header">
+            <h1 class="pseint" id="pseint" >Ejercicio numero tres del taller 4</h1> 
+        </header>
+        <h3>Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática.</h3>
+        <div class="codigo">
+            <pre>
+Proceso Punto3
+	Definir primo Como Entero;
+	Definir i,divisible Como Entero;
+	Definir contador Como Entero;
+	
+	Escribir "1  ";
+	Para i <- 2 Hasta 1000 Con Paso 1 Hacer
+		divisible <- 0;
+		Para contador <- 1 hasta 1000 con paso 1 Hacer
+			si i%contador=0 Entonces
+				divisible <- divisible+1;
+			FinSi
+		FinPara
+		Si divisible =2 Entonces
+			Escribir i," ";
+		FinSi
+	FinPara
+FinProceso
+            </pre>
+        </div>
+    </body>
+</html>

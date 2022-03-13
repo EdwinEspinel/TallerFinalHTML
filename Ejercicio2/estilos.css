@@ -1,0 +1,42 @@
+body{
+    width: 500px;
+    border-radius: 10px;
+    align-items: center;
+    height: 35px;
+}
+.dulce{
+    width: 200px;
+    font-family: 'Buggy','Cambridge', sans-serif;
+    border-radius: 10px;
+    height: 40px;
+    color: black;
+    font-weight: 200;
+    text-align: center;
+}
+.alcalinas{
+    width: 200px;
+    font-family: 'Buggy','Cambridge', sans-serif;
+    border-radius: 10px;
+    align-items: center;
+    height: 40px;
+    color: black;
+    font-weight: 200;
+    text-align: center;  
+}
+.contenedor-frutas{
+    width: 500px;
+    align-items: center;        
+}
+.cambiar{
+    width: 200px;
+    height: 50px;
+    align-items: center;
+    float: right;
+    margin: 250px 0px 0 0px;
+}
+.estilo1{
+    background-color: blue;
+}
+.estilo2{
+    background-color: red;
+}

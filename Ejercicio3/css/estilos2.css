@@ -1,0 +1,22 @@
+.body1{
+    padding: 3em;
+    background-color: #191c32;
+    color:#fff;
+    justify-content: space-around;
+}
+.lista li,.lista a{
+    list-style: none;
+    text-decoration: none;
+}
+.codigo{
+    background-color: black;
+    color:#fff;
+    padding: 2em;
+    border-radius: 10px;
+    border-solid:black;
+    margin: 0 auto;
+}
+body{
+    padding: 3em;
+}
+

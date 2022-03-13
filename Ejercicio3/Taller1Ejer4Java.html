@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio numero 4 Taller Java</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilos2.css">
+    </head>
+    <body>
+        <header class="header" id="header">
+            <h1 class="pseint" id="pseint" >Ejercicio numero cuatro del taller de Java</h1> 
+        </header>
+        <h3>Realizar el taller #4 de PSeInt en Java</h3>       
+
+        <div class="codigo">
+            <pre>
+package Taller4;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+    private static boolean bandera=true;
+    private static int opcion;
+    public static void main(String[] args) throws IOException{
+        do {
+            limpiarPantalla();
+            menu();
+            opcion = capturarOpcion();
+            bandera = evaluarOpcion(opcion);
+        } while (bandera == true);
+    }
+    private static void menu() {
+        System.out.println("Escoja un punto del taller");
+        System.out.println("1. Punto #1");
+        System.out.println("2. Punto #2");
+        System.out.println("3. Punto #3");
+        System.out.println("4. Punto #4");
+        System.out.println("5. Punto #5");
+        System.out.println("0. Salir del taller");
+        
+    }
+    private static int capturarOpcion() {
+        Scanner input = new Scanner(System.in);
+        return input.nextInt();
+    }
+    private static void limpiarPantalla() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
+    private static boolean evaluarOpcion(int opcion) throws IOException {
+        switch (opcion) {
+            case 1:
+                Vector vectores = new Vector();
+                vectores.vectores();
+                return true;
+            case 2:
+                Aleatorio aleatorios = new Aleatorio();
+                aleatorios.aleatorios();
+                return true;
+            case 3:
+                Primo primos = new Primo();
+                primos.primos();
+                return true;
+            case 4:
+                Matriz matrices = new Matriz();
+                matrices.matrices();
+                return true;
+            case 5:
+                Cuadro cuadrado = new Cuadro();
+                cuadrado.cuadrados();
+                return true;
+            case 0:
+                return false;
+            default:
+                System.out.println("Opción incorrecta");
+                System.in.read();
+        }
+        return true;
+        }
+}
+            </pre>            
+        </div>
+        <h3>Los links del respositorio donde se encuentran las clases asosiadas a este ejercicio se enlistaran a continuacion:</h3>
+        <div class="lista">
+                <ul>
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller4/Aleatorio.java"><h2>Aleatorio</h2></a></li>                     
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller4/Cuadro.java"><h2>Cuadro</h2></a></li>                     
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller4/Matriz.java"><h2>Matriz</h2></a></li>                     
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller4/Primo.java"><h2>Primo</h2></a></li>                     
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller4/Vector.java"><h2>Vector</h2></a></li>               
+                </ul>
+            </div>
+    </body>
+</html>

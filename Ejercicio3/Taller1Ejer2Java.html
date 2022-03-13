@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio numero 2 Taller Java</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilos2.css">
+    </head>
+    <body>
+        <header class="header" id="header">
+            <h1 class="pseint" id="pseint" >Ejercicio numero dos del taller de Java</h1> 
+        </header>
+        <h3>Realizar el taller #2 de PSeInt en Java</h3>       
+
+        <div class="codigo">
+            <pre>
+package Taller2;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+    private static boolean bandera=true;
+    private static int opcion;
+    
+    public static void main(String[] args) throws IOException{
+        do {
+            limpiarPantalla();
+            menu();
+            opcion = capturarOpcion();
+            bandera = evaluarOpcion(opcion);
+        } while (bandera == true);
+    }
+    private static void menu() {
+        System.out.println("Escoja un punto del taller");
+        System.out.println("1. Punto  #1");
+        System.out.println("2. Punto  #2");
+        System.out.println("3. Punto  #3");
+        System.out.println("4. Punto  #4  (Videos club)");
+        System.out.println("5. Punto  #5  (Drogueria)");
+        System.out.println("6. Punto  #6  (Taller motos)");
+        System.out.println("7. Punto  #7  (Indice de Masa Corporal)");
+        System.out.println("8. Punto  #8  (Pasteles)");
+        System.out.println("9. Punto  #9  (Figuras)");
+        System.out.println("10. Punto #10 (Pasteles)");
+        System.out.println("0. Salir del taller");
+        
+    }
+    private static int capturarOpcion() {
+        Scanner input = new Scanner(System.in);
+        return input.nextInt();
+    }
+    private static boolean evaluarOpcion(int opcion) throws IOException {
+        Persona person = new Persona();
+        switch (opcion) {
+            case 1:
+                person.Persona();
+                if(person.getEdad()>=18){
+                    System.out.println(person.getNombre()+" usted es mayor de edad");
+                }
+                return true;
+            case 2:
+                person.Persona();
+                if (person.getEdad()<18){
+                    System.out.println(person.getNombre()+" usted aun es un niño");
+                }
+                return true;
+            case 3:
+                person.Persona();
+                if (person.getEdad()>=18){
+                    System.out.println(person.getNombre()+" usted es mayor de edad, por lo tanto puede entrar a la fiesta");
+                }
+                if (person.getEdad()<18){
+                    System.out.println(person.getNombre()+" usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.");
+                }
+                return true;
+            case 4:
+                Videotienda videotienda= new Videotienda();
+                videotienda.videoTiendas();
+                return true;
+            case 5:
+                Drogueria miSalud = new Drogueria();
+                miSalud.droguerias();
+                return true;
+            case 6:
+                TallerMotos maquinista = new TallerMotos();
+                maquinista.TallerMaquinista();
+                return true;
+            case 7:
+                IndiceMasa indice =new IndiceMasa();
+                indice.EstadoPeso();
+                return true;
+            case 8:
+                Pasteleria pasteles=new Pasteleria();
+                pasteles.ElGordo();
+                return true;
+            case 9:
+                FiguraGeometrica Tareas= new FiguraGeometrica();
+                Tareas.Figuras();
+                return true;
+            case 10:
+                Banco suBancoFiel=new Banco();
+                suBancoFiel.Bancos();
+                return true;
+            case 0:
+                return false;
+            default:
+                System.out.println("Opción incorrecta");
+                System.in.read();
+        }
+        return true;
+    }
+    private static void limpiarPantalla() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
+}
+            </pre>            
+        </div>
+        <h3>Los links del respositorio donde se encuentran las clases asosiadas a este ejercicio se enlistaran a continuacion:</h3>
+        <div class="lista">
+                <ul>
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller2/Banco.java"><h2>Banco</h2></a></li>
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller2/Drogueria.java"><h2>Drogueria</h2></a></li>
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller2/FiguraGeometrica.java"><h2>FiguraGeometrica</h2></a></li>
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller2/IndiceMasa.java"><h2>IndiceMasa</h2></a></li>
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller2/Moto.java"><h2>Moto</h2></a></li>
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller2/Pasteleria.java"><h2>Pasteleria</h2></a></li>
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller2/Pedido.java"><h2>Pedido</h2></a></li>
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller2/Pelicula.java"><h2>Pelicula</h2></a></li>
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller2/Persona.java"><h2>Persona</h2></a></li>
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller2/ProductoDrogueria.java"><h2>ProductoDrogueria</h2></a></li>
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller2/TallerMotos.java"><h2>TallerMotos</h2></a></li>
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller2/Torta.java"><h2>Torta</h2></a></li>
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller2/Usuario.java"><h2>Usuario</h2></a></li>
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller2/Venta.java"><h2>Venta</h2></a></li>
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller2/Videotienda.javaa"><h2>Videotienda</h2></a></li>
+                </ul>
+            </div>
+    </body>
+</html>

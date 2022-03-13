@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio numero 1 Taller 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilos2.css">
+    </head>
+    <body>
+        <header class="header" id="header">
+            <h1 class="pseint" id="pseint" >Ejercicio numero uno del taller 1</h1> 
+        </header>
+        <h3>Realizar el taller #1 de PSeInt en Java</h3>       
+
+        <div class="codigo">
+            <pre>
+package Taller1;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+    private static boolean bandera=true;
+    private static int opcion;
+    private static String nombre;
+    private static String apellido;
+    private static String NombreMa;
+    private static String NombrePa;
+    
+    
+    
+    public static void main(String[] args) throws IOException{
+        do {
+            limpiarPantalla();
+            menu();
+            opcion = capturarOpcion();
+            bandera = evaluarOpcion(opcion);
+        } while (bandera == true);
+    }
+    private static void menu() {
+        System.out.println("Escoja un punto del taller");
+        System.out.println("1. Punto #1");
+        System.out.println("2. Punto #2");
+        System.out.println("3. Punto #3");
+        System.out.println("4. Punto #4");
+        System.out.println("5. Punto #5");
+        System.out.println("0. Salir del taller");
+        
+    }
+    private static int capturarOpcion() {
+        Scanner input = new Scanner(System.in);
+        return input.nextInt();
+    }
+    private static boolean evaluarOpcion(int opcion) throws IOException {
+        switch (opcion) {
+            case 1:
+                MisDatos p1 = new MisDatos();
+                p1.MisDatos();
+                return true;
+            case 2:
+                MisDatos p2 = new MisDatos();
+                p2.setOpcion(opcion);
+                p2.MisDatos();
+                return true;
+            case 3:
+                MisDatos p3 = new MisDatos();
+                p3.MisDatos();
+                NombreMadre p4 = new NombreMadre();
+                p4.NombreMadre();
+                NombrePadre p5 = new NombrePadre();
+                p5.NombrePadre();
+                System.out.println("yo "+p3.getNombre()+" "+p3.getApellidos()+" Soy hijo de "+p4.getNombreMa()+" y "+p5.getNombrePa());
+                return true;
+            case 4:
+                Capital p6 = new Capital();
+                p6.Capital();
+                return true;
+            case 5:
+                DatosMascota p7 = new DatosMascota();
+                p7.DatosMascota();
+                return true;
+            case 0:
+                return false;
+            default:
+                System.out.println("Opción incorrecta");
+                System.in.read();
+        }
+        return true;
+    }
+    private static void limpiarPantalla() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
+}
+            </pre>            
+        </div>
+        <h3>Los links del respositorio donde se encuentran las clases asosiadas a este ejercicio se enlistaran a continuacion:</h3>
+        <div class="lista">
+                <ul>
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller1/Capital.java"><h2>Capital</h2></a></li>
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller1/DatosMascota.java"><h2>DatosMascota</h2></a></li>
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller1/MisDatos.java"><h2>MisDatos</h2></a></li>
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller1/NombreMadre.java"><h2>NombreMadre</h2></a></li>
+                    <li><a href="https://github.com/EdwinEspinel/Taller-java/blob/main/CanteraNivel1/src/Taller1/NombrePadre.java"><h2>NombrePadre</h2></a></li>
+                </ul>
+            </div>
+    </body>
+</html>
